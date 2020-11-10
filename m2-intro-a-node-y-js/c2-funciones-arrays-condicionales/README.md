@@ -256,3 +256,5 @@ También tenemos:
 - `includes()` --> Devuelve `true` si encuentra un elemento, `false` de lo contario
 - `find()` --> Devuelve el elemento si lo encuentra, `undefined` en caso contrario
 - `join()` --> Une los elemento del array en un string, puede recibir un separador como parámetro.
+- `slice()` --> Devuelve una copia de una parte del array
+- `splice()` --> Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
