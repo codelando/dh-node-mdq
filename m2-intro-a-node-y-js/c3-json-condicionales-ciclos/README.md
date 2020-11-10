@@ -1,6 +1,6 @@
 # Algunos temas para repasar
 
-- Dejé algunas notas adicionales en el readme del día 3
+- Dejé algunas notas adicionales en el readme del día 2
 - Los tipos de datos y JS como lenguaje basado en objetos
 - Es bueno que investiguen las posibilidades de cada tipo de dato
 - Las funciones pueden usarse dentro de otras funciones
@@ -10,8 +10,6 @@
 - Ejemplos de Cheatsheets
 - https://repl.it/@lando_dh/ProgramacionCeroClaseUno#main.js
 - https://repl.it/@lando_dh/ProgramacionCeroClaseDos#main.js
-
-
 
 # Repaso
 - JSON y su utilidad
@@ -64,9 +62,9 @@ objetoLiteral.otroMetodo() // Nueva forma
 Funciones constructoras
 
 ```javascript
-function Auto(param1, param2) {
-    this.param1 = param1;
-    this.param2 = param2;
+function Auto(marca, modelo) {
+    this.marca = marca;
+    this.modelo = modelo;
 }
 
 let miAuto = new Auto();
@@ -76,7 +74,7 @@ let miAuto = new Auto();
 
 Son por definicion funciones anónimas.
 
-``` function (val) { return ... } ```
+``` let multiplicar = function (num1, num2) { return num1 * num2 } ```
 
 No necesita la palabra reservada function
 
