@@ -1,0 +1,45 @@
+body {
+    background-color: lightcyan;
+}
+
+
+p {
+    /* La propiedad font va intentar cargar cada fuente, y va a dejar la primera que exista */
+    /* serif y sans-serif son grupos de fuentes osea que se usará cualquiera que coincida */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#secondary-title {
+    color: magenta;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+/* Para combinar selectores, los escribimos uno junto al otro */
+.important.underlined {}
+
+h2.important {
+    color: red;
+}
+
+.important {
+    color: seagreen;
+    font-weight: bold;
+}
+
+h2.important {
+    color: turquoise;
+}
+
+/* Los selectores descendentes se escriben separados por un espacio*/
+
+div ul li {
+    color: brown;
+}
+
+p span {
+    color: coral;
+}
+
