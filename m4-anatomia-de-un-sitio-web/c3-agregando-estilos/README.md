@@ -23,7 +23,7 @@
 - line-height - Alto de linea
 - text-decoration - Decoración del texto
 - text-align - Alineación lateral
-- color
+- color - Color de la fuente
 
 ### Colores
 - nombres
@@ -40,4 +40,4 @@
 - backgroudn-attachment
 
 ### Generales
-- opacity
+- opacity - Ojo que esta propiedad le da opacidad al elemento y a su contenido
