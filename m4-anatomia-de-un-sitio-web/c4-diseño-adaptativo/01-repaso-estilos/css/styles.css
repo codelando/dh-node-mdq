@@ -1,0 +1,15 @@
+body {
+    background-image: url('http://thepatternlibrary.com/img/d.png');
+}
+
+.main {
+    background-color: rgba(255,255,255,0.75);
+    padding: 1em;
+}
+
+#mainTitle {}
+
+#subTitle {}
+
+.destacado {}
+.destacado-navidenio {}
