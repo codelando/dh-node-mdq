@@ -1,0 +1,68 @@
+:root {
+    --brand-green: rgb(51, 218, 51);
+
+    --default-padding: 1rem;
+    --default-border-radius: 1rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 75px 0 0;
+
+    font-family: sans-serif;
+    background-color: tomato;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 75px;
+    width: 100%;
+    display: flex;
+
+    padding: 1rem;
+    background-color: var(--brand-green);
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: var(--default-padding);
+}
+
+.contendor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: var(--default-padding);
+    overflow: hidden;
+}
+
+.buscador input { 
+    border: 0;
+    width: 100%;
+    min-width: 0;
+    padding: .5rem 1rem;
+}
+
+.buscador .icono {
+    padding: .5rem;
+}
