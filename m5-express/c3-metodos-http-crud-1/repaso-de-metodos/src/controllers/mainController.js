@@ -2,15 +2,7 @@
 
 module.exports = {
     index: (req, res) => {
-        res.render('index', { 
-            title: 'Listado de usuarios', 
-            users : [
-                { first_name: 'Juan' } , { first_name: 'María' }
-            ]
-        });
-    },
-    detail: (req, res) => {
-        res.render('detail');
+        res.redirect('/users');
     },
     contact: (req, res) => {
         res.send('Estoy en la página de contacto');
