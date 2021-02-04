@@ -1,0 +1,14 @@
+<header>
+    <nav class="main-nav">
+        <a href="/users">Listado de usuarios</a>
+        <a href="/users/create">Crear un usuario</a>
+    </nav>
+    <nav class="user-nav">
+        <% if (locals.user) { %>
+            <img class="profile-img" src="/img/users/<%= user.image ? user.image : 'default.png' %>" alt="<%= user.first_name %>">
+            <a href="/users/logout">Salir</a>
+        <% } else  { %> 
+            <a href="/users/login">Ingresar</a>
+        <% } %>
+    </nav>
+</header>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <article class="card">
+            <div class="card-left">
+                <figure>
+                    <img src="/img/users/<%= user.image ? user.image : 'default.png' %>" alt="">
+                </figure>
+                <h3>#<%= user.id %></h3>
+            </div>
+            <div class="card-content">
+                <h3><%= user.first_name %> <%= user.last_name %></h3>
+                <p>Categoría: <%= user.category %></p>
+                <p>Email: <a href="mailto:<%= user.email %>" target="_blank"><%= user.email %></a></p>
+                <p>
+                    <% user.images && user.images.forEach(image => { %>
+                        <img src="/img/users/<%= image ? image : 'default.png' %>" alt="">
+                    <% }); %>
+                </p>
+                <div>
+                    <a class="button" href="/users/<%= user.id %>">Ver detalle</a>
+                    <a class="button is-warning" href="/users/<%= user.id %>/edit">Editar</a>
+                    <form class="form is-inline" action="/users/<%= user.id %>?_method=delete" method="POST">
+                        <button class="button is-danger">Borrar</button>
+                    </form>
+
+                </div>
+            </div>   
+        </article>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,86 @@
+[
+ {
+  "first_name": "Usuario",
+  "last_name": "Editado",
+  "email": "un@email.com",
+  "password": "$2y$12$YW/WsN2SxJmnaVPZYWiH2eLLDnri5qxQf66iDp0bWVQi3L7JWGbfK",
+  "category": "vendedor",
+  "id": 3,
+  "image": "user-1611624710279.jpeg"
+ },
+ {
+  "first_name": "Roscoe",
+  "last_name": "Shorey",
+  "email": "rshorey3@theatlantic.com",
+  "password": "",
+  "category": "vendedor",
+  "id": 4,
+  "image": "user-1611624777693.jpeg"
+ },
+ {
+  "id": 8,
+  "first_name": "Tiphanie",
+  "last_name": "Eberdt",
+  "email": "teberdt7@gizmodo.com",
+  "password": "3jRjK81",
+  "category": "vendedor",
+  "image": null
+ },
+ {
+  "id": 10,
+  "first_name": "Ritchie",
+  "last_name": "Labram",
+  "email": "rlabram9@washington.edu",
+  "password": "dWoPzjU8",
+  "category": "vendedor",
+  "image": null
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "",
+  "category": "",
+  "id": 11
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "",
+  "category": "",
+  "id": 12
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "",
+  "category": "",
+  "id": 13
+ },
+ {
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "password": "",
+  "category": "",
+  "id": 14
+ },
+ {
+  "first_name": "adfasdfsdafadf",
+  "last_name": "sdafdsafsadsafdsfadsfadsfdfsafdasdafsdfdafs",
+  "email": "un@email.com",
+  "password": "",
+  "category": "",
+  "id": 15
+ },
+ {
+  "first_name": "Un nombre",
+  "last_name": "Un apellido",
+  "email": "otro@email.com",
+  "password": "$2a$10$qCnAEG/2QMB54VzjSkSdtOXuFP0NaQQpaRe6VAGt443ZV.FbQy7rm",
+  "category": "vendedor",
+  "id": 16
+ }
+]
