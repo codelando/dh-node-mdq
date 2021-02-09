@@ -1,0 +1,37 @@
+[
+ {
+  "first_name": "Un usuario",
+  "last_name": "Editado",
+  "email": "este@crud",
+  "password": "",
+  "category": "vendedor",
+  "id": 3
+ },
+ {
+  "id": 4,
+  "first_name": "Roscoe",
+  "last_name": "Shorey",
+  "email": "rshorey3@theatlantic.com",
+  "password": "EUdApoL",
+  "category": "vendedor",
+  "image": null
+ },
+ {
+  "id": 8,
+  "first_name": "Tiphanie",
+  "last_name": "Eberdt",
+  "email": "teberdt7@gizmodo.com",
+  "password": "3jRjK81",
+  "category": "vendedor",
+  "image": null
+ },
+ {
+  "id": 10,
+  "first_name": "Ritchie",
+  "last_name": "Labram",
+  "email": "rlabram9@washington.edu",
+  "password": "dWoPzjU8",
+  "category": "vendedor",
+  "image": null
+ }
+]

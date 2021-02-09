@@ -1,0 +1,32 @@
+/* https://coolors.co/fbf5f3-e28413-000022-de3c4b-c42847 */
+
+* { box-sizing: border-box; }
+
+hr {
+    border: 5px solid whitesmoke;
+    margin: 2em 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #000022;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+.titular-px {
+    font-size: 16px;
+}
+
+/* Relativo al padre, por lo general es difícil de manejar */
+.titular-em {
+    font-size: 2em;
+}
+
+/* Relativo al tamaño del ancho del viewport */
+.titular-vw {
+    font-size: 5vw; 
+}

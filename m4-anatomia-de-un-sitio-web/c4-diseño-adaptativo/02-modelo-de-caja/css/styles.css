@@ -1,0 +1,34 @@
+/* https://coolors.co/ffbe0b-fb5607-ff006e-8338ec-3a86ff */
+
+/* Selector universal, aplica a todos los elementos */
+* { box-sizing: border-box; }
+
+.box {
+    width: 300px;
+    height: 100px;
+
+    padding: 30px;
+
+    /*
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    */
+
+    /*
+    padding: 30px 30px;
+    padding: 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
+    */
+
+    /* border: 15px solid #FF006E; */
+    margin: 30px;
+
+    background-color: #8338EC;
+    color: white;
+}
+
+.box-purple { background-color: #8338EC; }
+.box-blue { background-color: #3A86FF; }
+.has-border { border-left: 15px solid #FF006E; }

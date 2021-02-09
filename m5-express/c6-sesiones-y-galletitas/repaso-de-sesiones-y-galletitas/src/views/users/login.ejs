@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <h1>Ingresá con tus datos</h1>
+                        <form action="/users/login" method="POST">
+
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <div class="control">
+                                    <input type="text" name="email" id="email" value="<%= locals.old && old.email ? old.email : '' %>">
+                                </div>
+                                <% if (locals.errors && errors.email) { %>
+                                    <p class="feedback is-danger"><%= errors.email.msg %></p>
+                                <% } %>
+                            </div>
+
+                            <div class="field">
+                                <label for="password">Password</label>
+                                <div class="control">
+                                    <input type="password" name="password" id="password">
+                                </div>
+                                <% if (locals.errors && errors.password) { %>
+                                    <p class="feedback is-danger"><%= errors.password.msg %></p>
+                                <% } %>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit">Ingresar</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

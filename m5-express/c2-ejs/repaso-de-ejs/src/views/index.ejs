@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+    <main>
+        <div class="container">
+            <h1><%= title %></h1>
+
+            <% users.forEach(user => { %>
+                <article class="card">
+                    <div class="card-left">
+                        <figure>
+                            <img src="img/users/default.png" alt="">
+                        </figure>
+                        <h3>#1</h3>
+                    </div>
+                    <div class="card-content">
+                        <h3><%= user.first_name %></h3>
+                        <p>Categoría: Vendedor</p>
+                        <p>Email: <a href="mailto:un@email.com" target="_blank">un@email.com</a></p>
+                        <div>
+                            <a class="button" href="/users/1">Ver detalle</a>
+                        </div>
+                    </div>   
+                </article>
+            <% }) %>
+            
+        </div>
+    </main>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

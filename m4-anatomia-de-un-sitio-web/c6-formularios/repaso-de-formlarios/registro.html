@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="register-form">
+            <h1>Formulario de registro</h1>
+            <form action="exito.html" method="POST">
+                <div class="row">
+                    <label for="first-name">Nombre: </label>
+                    <input type="text" name="first-name" id="first-name" placeholder="Ingresa tu nombre aquí">
+                </div>
+
+                <div class="row">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Ingresa un email válido">
+                </div>
+
+                <div class="row">
+                    <p>Perfil de usuario:</p>
+                    <!--
+                        <label for="user-type-buyer">Comprador</label>
+                        <input type="checkbox" name="user-type" id="user-type-buyer" value="buyer"> 
+                    -->
+
+                    <label>
+                        <input type="checkbox" name="user-type" id="user-type-buyer" value="buyer"> Comprador
+                    </label>
+                    <label>
+                        <input type="checkbox" name="user-type" id="user-type-seller" value="seller"> Vendedor
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label for="country">País</label>
+                    <select name="country" id="country" required>
+                        <option value="">Selecciona un país</option>
+                        <option value="arg">Argentina</option>
+                        <option value="chi">Chile</option>
+                        <option value="bra">Brasil</option>
+                        <option value="col">Colombia</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div>
+            <h2>Contacto</h2>
+            <form action="contacto.html">
+                <div class="row">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Ingresa un email válido">
+                </div>
+
+                <div class="row">
+                    <label for="message">Mensaje: </label>
+                    <textarea name="message" id="message" rows="5" placeholder="Ingresa la razón del contacto aquí"></textarea>
+                </div>
+
+                <div class="row">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <h1>Nuevo usuario</h1>
+                        <form action="/users" method="POST" enctype="multipart/form-data">
+
+                            <div class="field">
+                                <label for="first_name">Nombre</label>
+                                <div class="control">
+                                    <input type="text" name="first_name" id="first_name" value="<%= locals.old && old.first_name ? old.first_name : '' %>">
+                                </div>
+                                <% if (locals.errors && errors.first_name) { %>
+                                    <p class="feedback is-danger"><%= errors.first_name.msg %></p>
+                                <% } %>
+                            </div>
+
+                            <div class="field">
+                                <label for="last_name">Apellido</label>
+                                <div class="control">
+                                    <input type="text" name="last_name" id="last_name" value="<%= locals.old && old.last_name ? old.last_name : '' %>">
+                                </div>
+                                <% if (locals.errors && errors.last_name) { %>
+                                    <p class="feedback is-danger"><%= errors.last_name.msg %></p>
+                                <% } %>
+                            </div>
+
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <div class="control">
+                                    <input type="text" name="email" id="email" value="<%= locals.old && old.email ? old.email : '' %>">
+                                </div>
+                                <% if (locals.errors && errors.email) { %>
+                                    <p class="feedback is-danger"><%= errors.email.msg %></p>
+                                <% } %>
+                            </div>
+
+                            <div class="field">
+                                <label for="image">Imagen de perfil</label>
+                                <div class="control">
+                                    <input type="file" name="image" id="image">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="password">Password</label>
+                                <div class="control">
+                                    <input type="password" name="password" id="password">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="category">Categoría</label>
+                                <div class="control">
+                                    <select name="category" id="category">
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="vendedor">Vendedor</option>
+                                        <option value="comprador">Comprador</option>
+                                    </select>
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit">Crear usuario</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

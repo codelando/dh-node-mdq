@@ -1,0 +1,75 @@
+@import "login.css";
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    
+    color: black;
+    font-family: sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Clases generales */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header .container {
+    padding: 1rem;
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+header a { 
+    display: inline-block;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+header nav a:hover {
+    color:lightseagreen;
+} 
+
+header .header-right { display: flex; }
+
+header .logo {
+    font-style: italic;
+    font-weight: bold;
+    color: deeppink;
+}
+
+/* Hero */
+
+.hero {
+    background-color: #333;
+    color: white;
+}
+
+.hero-item {
+    height: 600px;
+
+    background-image: url('../img/hero-bg.jpeg');
+    background-size: cover;
+}
+
+/* block element modifier */
+
+/*
+.header-logo {}
+.header-logo--xmas {}
+
+.header-main-nav {}
+
+.button {}
+.button--big {}
+*/
