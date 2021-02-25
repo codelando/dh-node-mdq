@@ -1,0 +1,46 @@
+html,body{
+    background: url(/background.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'DotGothic16', sans-serif;
+    color: white;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    color: pink;
+}
+
+header{
+    font-size: 4rem;
+    color: #0cee0c;
+    background: black;
+    letter-spacing: 1px;
+}
+
+nav{
+    background: #ee0ccd;
+    text-align: center;
+}
+
+nav a{
+    color: black; 
+    font-size: 2rem;
+}
+
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.product a{
+    color: black;
+}
+.product{
+    background: white;
+    padding: 10px;
+}

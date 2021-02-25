@@ -1,0 +1,11 @@
+
+<!doctype html>
+<html>
+    <%- include('../partials/head', { title: product.name}) %>
+
+    <body>
+        <%- include('../partials/header') %>
+        <h2><%= product.name %> ($<%= product.price %>)</h2>
+        <img src="<%= product.image %>" width="300" />
+    </body>
+</html>
