@@ -119,3 +119,8 @@ form .field input[type="number"]{
     font-size: 20px;
     padding: 3px;
 }
+
+.error {
+    color: red;
+    text-align: center;
+}

@@ -2,6 +2,8 @@ const express = require('express');
 const multer = require('multer');
 const uuid4 = require('uuid4')
 
+const authMiddleware = require('../middlewares/auth')
+
 const router = express.Router();
 
 const controller = require('../controllers/dashboardController');
@@ -26,14 +28,17 @@ const storage = multer.diskStorage(
 
 const upload = multer({ storage })
 
-router.get('/products', controller.productList);
+router.get('/login', controller.loginForm);
+router.post('/login', controller.login);
 
-router.get('/products/create', controller.createProductForm);
-router.post('/products/create', upload.single('image'), controller.createProduct);
+router.get('/products', authMiddleware, controller.productList);
 
-router.get('/products/:id', controller.editProductForm);
-router.put('/products/:id', upload.single('image'), controller.editProduct);
+router.get('/products/create', authMiddleware, controller.createProductForm);
+router.post('/products/create', authMiddleware, upload.single('image'), controller.createProduct);
 
-router.delete('/products/:id', controller.deleteProduct);
+router.get('/products/:id', authMiddleware, controller.editProductForm);
+router.put('/products/:id', authMiddleware, upload.single('image'), controller.editProduct);
+
+router.delete('/products/:id', authMiddleware, controller.deleteProduct);
 
 module.exports = router;

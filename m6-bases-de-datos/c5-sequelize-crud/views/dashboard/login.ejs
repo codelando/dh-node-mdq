@@ -1,0 +1,29 @@
+
+<!doctype html>
+<html>
+    <%- include('../partials/head', { title: 'Lista de Productos'}) %>
+
+    <body>
+        <%- include('../partials/header-dashboard') %>
+        <h2>INGRESAR</h2>
+        <p class='error'><%= error %></p>
+
+        <form method="POST" action="login">
+            <div class='field'>
+                <label>Nombre</label>
+                <input type="text" name="user" required/>
+            </div>
+
+            <div class='field'>
+                <label>Password</label>
+                <input type="password" name="password" required/>
+            </div>
+
+            <button>INGRESAR</button>
+        </form>
+        
+        <a href="/dashboard/products" class='button'>VOLVER AL LISTADO</a>
+            
+        </div>
+    </body>
+</html>

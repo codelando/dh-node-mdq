@@ -1,8 +1,30 @@
-const { Product } = require('../database/models')
-const { Category } = require('../database/models')
+const { Product, Category, User } = require('../database/models')
+const bcrypt = require('bcryptjs');
 
 
 module.exports = {
+    loginForm(req, res) {
+        res.render('dashboard/login', { error: '' })
+    },
+    login(req, res) {
+        User.findOne({
+            where: {
+                user: req.body.user,
+            }
+      })
+        .then(user => {
+            if (!user) {
+                return res.render('dashboard/login', { error: 'Usuario no encontrado'})
+            }
+            if (bcrypt.compareSync(req.body.password, user.password)) {
+                req.session.auth = true
+                res.redirect('/dashboard/products')
+                return
+            }
+
+            res.render('dashboard/login', { error: 'Usuario no encontrado' })
+        })
+    },
     productList(req, res) {
         Product.findAll({
         })
@@ -16,15 +38,13 @@ module.exports = {
         const { file } =  req
         const { name, category_id, price, order  } =  req.body
 
-        const product = Product.build({
+        Product.create({
             name,
             category_id, 
             price, 
             order,
             image: file.filename
         })
-        
-        product.save()
             .then(() => res.redirect('/dashboard/products'))
         
         
