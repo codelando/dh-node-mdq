@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html>
+    <%- include('../partials/head', { title: 'Lista de Productos'}) %>
+
+    <body>
+        <%- include('../partials/header-dashboard') %>
+        <h2>LISTA DE PRODUCTOS</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>PRECIO</v>
+                <th>ACCIONES</th>
+            </tr>
+            <% products.forEach(product => { %>
+                <tr>
+                    <td><%= product.id%></td>
+                    <td><%= product.name%></td>
+                    <td>$ <%= product.price%></td>
+                    <td>
+                        <a href='products/<%= product.id%>'>EDITAR</a> |
+                        <form class='borrar' action="/dashboard/products/<%= product.id%>?_method=DELETE" method="POST">
+                            <button class='borrar'>BORRAR</button>
+                        </form></td>
+                </tr>    
+            <% }) %>
+        </table>
+        <a href="products/create" class='button'>CREAR PRODUCTO</a>
+            
+        </div>
+    </body>
+</html>
