@@ -3,7 +3,7 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             autoIncrement: true,
             primaryKey: true,
-            type: dataTypes.INTEGER(11)
+            type: dataTypes.INTEGER(11),
         },
         name: {
             type: dataTypes.STRING(200),
@@ -19,7 +19,12 @@ module.exports = (sequelize, dataTypes) => {
         },
         order: {
             type: dataTypes.INTEGER
-        }
+        },
+        category_id: {
+            type: dataTypes.INTEGER,
+            allowNull: false,       
+        },
+        
     }, {
         tableName: 'products',
         paranoid: true
