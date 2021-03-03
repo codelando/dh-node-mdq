@@ -113,9 +113,16 @@ form .field label{
     display: block;
 }
 form .field select,
+form .field input[type="password"],
 form .field input[type="text"],
 form .field input[type="number"]{
     width: 100%;
     font-size: 20px;
     padding: 3px;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.error {
+    color: red;
+    text-align: center;
 }

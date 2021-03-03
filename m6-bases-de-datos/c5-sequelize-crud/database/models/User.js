@@ -5,14 +5,18 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        name: {
+        user: {
             type: dataTypes.STRING
         },
         password: {
             type: dataTypes.STRING,
         },
+        genre: {
+            type: dataTypes.ENUM('masculino', 'femenino', 'otros')
+        }
     }, {
         tableName: 'users',
+        timestamps: false,
     });
     
     return User;
