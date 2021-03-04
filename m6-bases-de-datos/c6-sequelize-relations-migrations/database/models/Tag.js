@@ -16,12 +16,11 @@ module.exports = (sequelize, dataTypes) => {
     Tag.associate = models => {
         Tag.belongsToMany(models.Product, {
             as: 'products',
-            through: 'product_tag',
+            through: 'products_tags',
             foreignKey: 'tag_id',
             otherKey: 'product_id',
             timestamps: false
         })
     }
-    
     return Tag;
 }

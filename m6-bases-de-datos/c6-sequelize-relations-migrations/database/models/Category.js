@@ -12,12 +12,12 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'categories',
     });
 
-    Category.associate = models => {
-        Category.hasMany(models.Product, {
+    Category.associate = model => {
+        Category.hasMany(model.Product, {
             as: 'products',
             foreignKey: 'category_id'
         })
     }
-    
+
     return Category;
 }

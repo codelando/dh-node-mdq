@@ -119,3 +119,18 @@ form .field input[type="number"]{
     font-size: 20px;
     padding: 3px;
 }
+
+.categories,.tags{
+    margin-top: 20px;
+}
+
+.category,.tag{
+    background: #80de53;
+    display: inline-block;
+    padding: 10px;
+    color: black;
+}
+
+.category{
+    background: #ee0ccd;
+}

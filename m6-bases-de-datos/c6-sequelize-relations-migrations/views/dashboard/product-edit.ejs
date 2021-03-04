@@ -32,10 +32,11 @@
                 <label>Categoría</label>
                 <select required name="category_id">
                     <% categories.forEach(category => { %>
-                        <option value="<%= category.id %>" <% product.category_id === category.id ? 'selected' : '' %>><%= category.name %></option>
+                        <option value="<%= category.id %>" <%= product.category_id === category.id ? 'selected' : '' %>><%= category.name %></option>
                     <% }) %>
                 </select>
             </div>
+
 
             <button>GUARDAR</button>
         </form>

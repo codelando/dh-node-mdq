@@ -19,6 +19,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         order: {
             type: dataTypes.INTEGER
+        },
+        category_id: {
+            type: dataTypes.INTEGER
         }
     }, {
         tableName: 'products',
@@ -30,17 +33,15 @@ module.exports = (sequelize, dataTypes) => {
             as: 'category',
             foreignKey: 'category_id'
         })
-    }
 
-    Product.associate = models => {
         Product.belongsToMany(models.Tag, {
             as: 'tags',
-            through: 'product_tag',
+            through: 'products_tags',
             foreignKey: 'product_id',
             otherKey: 'tag_id',
-            timestamps: false
+            timestamps: false,
         })
     }
-    
+
     return Product;
 }

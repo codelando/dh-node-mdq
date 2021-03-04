@@ -1,37 +1,32 @@
 const { Product } = require('../database/models')
 const { Category } = require('../database/models')
 
-
 module.exports = {
     productList(req, res) {
-        Product.findAll({
-            include: 'category'
-        })
+        Product.findAll()
             .then(products => {
-                console.log('p', products)
                 res.render('dashboard/product-list', { products })
             })
+            .catch(err => console.log(err))
     },
     createProductForm(req, res) {
         Category.findAll()
-            .then(categories => res.render('dashboard/product-create', { categories }))
+            .then((categories) => res.render('dashboard/product-create', { categories }))
     },
     createProduct(req, res) {
         const { file } =  req
         const { name, category_id, price, order  } =  req.body
 
-        const product = Product.build({
+        Product.create({
             name,
-            category_id, 
             price, 
             order,
-            image: file.filename
+            category_id,
+            image: file.filename,
         })
-        
-        product.save()
-            .then(() => res.redirect('/dashboard/products'))
-        
-        
+            .then(product => {
+                res.redirect('/dashboard/products')
+            })
     },
     editProductForm(req, res) {
         Promise.all([
@@ -39,26 +34,26 @@ module.exports = {
             Product.findOne({ 
                 where: {
                     id: req.params.id
-                }
-                }
-            )])
+                },
+            })
+        ])
         .then(([categories, product]) => {
             res.render('dashboard/product-edit', { categories, product })
         })
     },
     editProduct(req, res) {
-        
         const { file } =  req
         const { name, category_id, price, order  } =  req.body
-        
-        Product.findOne({ where: { id: req.params.id } })
-            .then(product => {
+        Product.findOne({ 
+            where: { id: req.params.id },
+        })
+            .then((product) => {
                 product.update({
                     name,
                     category_id,
                     price,
                     order,
-                    image: file? file.filename : product.image
+                    image: file? file.filename : product.image,
                 })
                     .then(() => {
                         res.redirect('/dashboard/products')
@@ -66,7 +61,6 @@ module.exports = {
             })
     },
     deleteProduct(req, res) {
-        console.log('deleteProduct')
         Product.destroy({
             where: {
                 id: req.params.id
