@@ -1,0 +1,25 @@
+
+<!doctype html>
+<html>
+    <%- include('../partials/head', { title: product.name}) %>
+
+    <body>
+        <%- include('../partials/header') %>
+        <center>
+            <h2><%= product.name %> ($<%= product.price %>)</h2>
+            <img src="/images/<%= product.image %>" width="300" />
+            
+            <div class="categories">
+                <div class='category'><%= product.category.name %></div>
+            </div>
+
+            <div class="tags">
+                <% product.tags.forEach(tag => {
+                %>
+                <div class='tag'><%= tag.name %></div>
+                <% }) %>
+            </div>
+
+        </center>
+    </body>
+</html>
