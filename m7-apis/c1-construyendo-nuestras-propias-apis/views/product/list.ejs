@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html>
+    <%- include('../partials/head', { title: 'Lista de Productos'}) %>
+
+    <body>
+        <%- include('../partials/header') %>
+        <h2>LISTA DE PRODUCTOS</h2>
+        <div class='products'>
+            <% products.forEach(product => { %>
+                <p class='product' product-id="<%= product.id%>">
+                    <img src="/images/<%= product.image%>" height=100"/><br/>
+                    <a><%= product.name%> ($ <%= product.price%>)</a>
+                </p>
+            <% }) %>
+        </div>
+        <div id="detail-wrapper">
+            <div class="content"></div>
+        </div>
+        
+        <script>
+            const modalContentTarget = document.querySelector('#detail-wrapper .content')
+            const modalTarget = document.querySelector('#detail-wrapper')
+
+            modalTarget.onclick = () => {
+                modalTarget.style.display = 'none'
+            }
+
+            function loadDetailModal(id) {
+                fetch(`/api/products/${id}`)
+                    .then(res => res.json())
+                    .then(({data})  => {
+                       modalContentTarget.innerHTML = `
+                            <p>${data.name}</p>
+                            <p>$ ${data.price}</p>
+                            <img src="/images/${data.image}" width=70%" /><br/>
+                            <span class='detail-category'>${data.category.name}</span>
+                        `
+
+                        modalTarget.style.display = 'flex'
+                    })
+            }
+            document.querySelectorAll('.product')
+                .forEach(product => {
+                    product.onclick = () => {
+                        const id = product.getAttribute('product-id')
+                        loadDetailModal(id)
+                    }
+                })
+        </script>
+    </body>
+</html>

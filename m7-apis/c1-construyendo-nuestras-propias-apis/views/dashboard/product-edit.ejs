@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html>
+    <%- include('../partials/head', { title: 'Lista de Productos'}) %>
+
+    <body>
+        <%- include('../partials/header-dashboard') %>
+        <h2>EDITANDO PRODUCTO #<%= product.id %></h2>
+
+        <form action="/dashboard/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class='field'>
+                <label>Nombre</label>
+                <input type="text" name="name" value="<%= product.name %>" required/>
+            </div>
+
+            <div class='field'>
+                <label>Precio</label>
+                <input type="number" name="price" value="<%= product.price %>" required/>
+            </div>
+
+            <div class='field'>
+                <label>Orden</label>
+                <input type="number" name="order" value="<%= product.order %>" required/>
+            </div>
+
+            <div class='field'>
+                <label>Imágen</label>
+                <input type="file" name="image"/>
+            </div>
+
+            <div class='field'>
+                <label>Categoría</label>
+                <select required name="category_id">
+                    <% categories.forEach(category => { %>
+                        <option value="<%= category.id %>" <%= product.category_id === category.id ? 'selected' : '' %>><%= category.name %></option>
+                    <% }) %>
+                </select>
+            </div>
+
+
+            <button>GUARDAR</button>
+        </form>
+        
+        <a href="/dashboard/products" class='button'>VOLVER AL LISTADO</a>
+            
+        </div>
+    </body>
+</html>
