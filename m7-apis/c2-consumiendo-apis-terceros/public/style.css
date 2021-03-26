@@ -1,0 +1,172 @@
+html,body{
+    background: url(/background.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'DotGothic16', sans-serif;
+    color: white;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    color: pink;
+}
+
+header{
+    font-size: 4rem;
+    color: #0cee0c;
+    background: black;
+    letter-spacing: 1px;
+}
+
+nav{
+    background: #ee0ccd;
+    text-align: center;
+}
+
+nav a{
+    color: black; 
+    font-size: 2rem;
+}
+
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.product a{
+    color: black;
+}
+.product{
+    cursor: pointer;
+    background: white;
+    padding: 10px;
+}
+
+h2{
+    text-align: center;
+}
+
+table{
+    width: 90%;
+    margin: auto;
+}
+
+table tr th{
+    background: pink;
+    color: black;
+}
+
+table td{
+    padding: 5px;
+}
+table tr td{
+    background: black;
+    color: white;
+}
+
+.button,button:not(.borrar){
+    margin: auto;
+    background: pink;
+    color: black;
+    padding: 5px;
+    display: block;
+    margin-top: 20px;
+    width: 180px;
+    text-align: center;
+}
+
+button:not(.borrar){
+    background:chartreuse;
+    margin-bottom: 50px;
+    font-family: 'DotGothic16', sans-serif;
+    cursor: pointer;
+    border: 0;
+}
+
+form.borrar,
+button.borrar{
+    background: transparent;
+    font-family: 'DotGothic16', sans-serif;
+    border: 0;
+    color: pink;
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline;
+    font-size: 16px;
+}
+
+form:not(.borrar){
+    width: 600px;
+    display: block;
+    margin: auto;
+    border-bottom: 1px solid chartreuse;
+}
+
+.exchange{
+    background: gray;
+    text-align: center;
+    color: pink;
+    padding:10px;
+}
+
+form .field{
+    margin: 20px;
+}
+form .field label{
+    margin-bottom: 3px;
+    display: block;
+}
+form .field select,
+form .field input[type="password"],
+form .field input[type="email"],
+form .field input[type="text"],
+form .field input[type="number"]{
+    width: 100%;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.categories,.tags{
+    margin-top: 20px;
+}
+
+.category,.tag{
+    background: #80de53;
+    display: inline-block;
+    padding: 10px;
+    color: black;
+}
+
+.category{
+    background: #ee0ccd;
+}
+
+#detail-wrapper{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(14px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+}
+
+#detail-wrapper .content{
+    background: white;
+    width: 500px;
+    min-height: 500px;
+    color: black;
+    text-align: center;
+}
+
+.detail-category{
+    background: pink;
+}

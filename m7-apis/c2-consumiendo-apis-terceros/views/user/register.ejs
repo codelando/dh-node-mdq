@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html>
+    <%- include('../partials/head', { title: 'Registro de Usuario'}) %>
+
+    <body>
+        <%- include('../partials/header') %>
+        <center>
+            <form method="POST" action="register" enctype="multipart/form-data">
+                <div class='field'>
+                    <label>Nombre</label>
+                    <input type="text" name="name" required/>
+                </div>
+    
+                <div class='field'>
+                    <label>Contraseña</label>
+                    <input type="password" name="password" required/>
+                </div>
+    
+                <div class='field'>
+                    <label>Email</label>
+                    <input type="email" name="email" required/>
+                </div>
+    
+                <div class='field'>
+                    <label>País</label>
+                    <select required name="country">
+                        <% countries.forEach(country => {%>
+                            <option><%= country%></option>
+                        <%})%>
+                    </select>
+                </div>
+    
+    
+                <button>REGISTRAR</button>
+            </form>
+
+        </center>
+    </body>
+</html>
