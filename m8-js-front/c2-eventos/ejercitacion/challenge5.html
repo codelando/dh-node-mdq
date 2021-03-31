@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EJ 5</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background: pink;
+                min-height: 100vh;
+                font-size: 50px;
+            }
+
+            button{
+                border: 0;
+                background: black;
+                color: white;
+                padding: 10px;
+            }
+
+            main{
+                text-align: center;
+            }
+
+            #word{
+                background:black;
+                color: white;
+                padding: 10px;
+            }
+
+            .alert{
+                margin: 100px;
+                border: 2px dotted violet;
+            }
+
+        </style>
+    </head>
+    <body >
+        <main>
+            Escriba la palabra:
+            <span id="word"></span>
+
+            <div id="success" class="alert">bien! 😆</div>
+            <div id="error" class="alert">le pifiaste! 🤪</div>
+        </main>
+        <script src="js/randomwords.js"></script>
+        <script>
+
+            const word = words()
+            document.querySelector("#word").innerHTML = word
+
+           /*
+            Al cargar la página aparecerá una palabra random,
+            La idea es escuchar los eventos del teclado y si escribe las letras
+            correspondientes mostrar el cartel de success,
+            si alguna le pifia, mostrar el de error
+           */
+        </script>
+    </body>
+</html>

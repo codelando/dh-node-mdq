@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EJ 1</title>
+        <meta charset="utf-8">
+        <style>
+            html,body{
+                font-family: Arial, Helvetica, sans-serif;
+                background: pink;
+            }
+
+            button{
+                border: 0;
+                background: black;
+                color: white;
+                padding: 10px;
+            }
+
+            main{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .modal-wrapper{
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                backdrop-filter: blur(10px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }  
+
+            .modal-wrapper .modal-content{
+                max-width: 640px;
+                background: gray;
+                padding: 100px;
+            }
+
+            #modal{
+                display: none;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <button>Abrir modal</button>
+        </main>
+
+        
+        <div id="modal">
+            <div class="modal-wrapper">
+                <div class="modal-content">
+                    <h2>Título del modal</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, reprehenderit obcaecati laborum cumque eaque omnis soluta quia magni. Dicta illo inventore molestiae distinctio aspernatur nam aperiam enim doloribus debitis et.</p>
+                    <button>Cerrar modal</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+           /*
+           Al clickear en el botón 'Abrir modal' debe mostrar el modal (que está oculto)
+           Al clickear en el botón 'Cerrar modal' debe cerrar el mismo
+           Si tenes ganas, también podes hacer que con la tecla 'escape' se cierre el modal
+           */
+        </script>
+    </body>
+</html>
