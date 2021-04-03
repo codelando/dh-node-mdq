@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EJ 3
+
+        </title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+
+        <style>
+            html,body{
+                font-family: 'Roboto', Arial, Helvetica, sans-serif;
+                background: pink;
+                font-weight: 400;
+            }
+
+            input,button,textarea{
+                width: 100%;
+                padding: 10px;
+                font-family: 'Roboto', Arial, Helvetica, sans-serif;
+                font-size: 1.5rem;
+                font-weight: 400;
+                box-sizing: border-box;
+            }
+            textarea{
+                height: 100px;;
+            }
+
+            main{
+                max-width: 680px;
+                margin: auto;
+            }
+
+            form{
+                gap: 10px;
+                background: white;
+                padding: 20px;
+                box-shadow: 0px 21px 30px -3px rgb(0 0 0 / 20%);
+            }
+
+            input{
+                
+            }
+            button{
+                
+                background: violet;
+                border: 0;
+                color: white;   
+                cursor: pointer;
+            }
+
+            .field{
+                margin: 20px;
+                position: relative;
+            }
+            .icon{
+                position: absolute;
+                top: 13px;
+                right: 10px;
+                width: 25px;
+            }
+
+            .tasks-wrapper{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            .card{
+                background: #4359af;
+                color: white;
+                padding: 20px;
+                box-shadow: 0px 21px 30px -3px rgb(0 0 0 / 20%);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <h2>LISTADO DE PENDIENTES</h2>
+            
+            <form method="POST" action="register">
+                <div class="field">
+                    <textarea name="task" id="" cols="30" rows="10"></textarea>
+                </div>
+                
+                <div class="field">
+                    <button>AGREGAR TAREA</button>
+                </div>
+            </form>
+
+
+            <div class="tasks-wrapper">
+                
+                <div class="card">
+                    [Texto de la tarea 1]
+                </div>
+
+                <div class="card">
+                    [Texto de la tarea 2]
+                </div>
+
+                <div class="card">
+                    [Texto de la tarea 3]
+                </div>
+
+                <div class="card">
+                    [Texto de la tarea 4]
+                </div>
+
+            </div>
+        </main>
+
+       
+
+        <script>
+           /*
+           - TO DO:
+           - Cada vez que agrega una nueva tarea renderizar una lista
+           */
+        </script>
+    </body>
+</html>

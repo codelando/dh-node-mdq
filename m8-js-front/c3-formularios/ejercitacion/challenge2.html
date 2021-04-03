@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EJ 2</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+
+        <style>
+            html,body{
+                font-family: 'Roboto', Arial, Helvetica, sans-serif;
+                background: pink;
+                font-weight: 400;
+            }
+
+            input,button{
+                width: 100%;
+                padding: 10px;
+                font-family: 'Roboto', Arial, Helvetica, sans-serif;
+                font-size: 1.5rem;
+                font-weight: 400;
+                box-sizing: border-box;
+                
+            }
+
+            main{
+                max-width: 680px;
+                margin: auto;
+            }
+
+            form{
+                gap: 10px;
+                background: white;
+                padding: 20px;
+                box-shadow: 0px 21px 30px -3px rgb(0 0 0 / 20%);
+            }
+
+            input{
+                
+            }
+            button{
+                
+                background: violet;
+                border: 0;
+                color: white;   
+                cursor: pointer;
+            }
+
+            .field{
+                margin: 20px;
+                position: relative;
+            }
+            .icon{
+                position: absolute;
+                top: 13px;
+                right: 10px;
+                width: 25px;
+            }
+
+
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <form method="POST" action="register">
+                <div class="field">
+                    <h2>Ingresar al sitio</h2>
+                </div>
+                <div class="field">
+                    <input name="email" placeholder="Nombre..." />
+                    <img src="img/check.png" class="icon success-email" alt="">
+                    <img src="img/cancel.png" class="icon error-email" alt="">
+
+                </div>
+                <div class="field">
+                    <input name="password" type="password" placeholder="Password..." />
+                    <img src="img/check.png" class="icon success-email" alt="">
+                    <img src="img/cancel.png" class="icon error-email" alt="">
+                </div>
+                
+                <div class="field">
+                    <button>INGRESAR</button>
+                </div>
+            </form>
+        </main>
+
+       
+
+        <script>
+           /*
+           - Mostrar el ícono correspondiente en cada campo si esta correcto o no
+           - Se puede hacer al clickear en el botón o al tipear en cada campo
+           */
+        </script>
+    </body>
+</html>
