@@ -44,8 +44,13 @@
                 flex: 1;
                 background: violet;
                 border: 0;
-                color: white;   
-                cursor: pointer;
+                color: white;  
+                cursor: pointer; 
+            }
+
+            button[disabled]{
+                background: #cfcfcf;
+                pointer-events: none;
             }
 
 
@@ -55,7 +60,7 @@
     <body>
         <main>
             <form method="POST" action="search  ">
-                <input name="search" placeholder="Ingresa una palabra clave..." /><button>BUSCAR</button>
+                <input id="input-search" name="search" placeholder="Ingresa una palabra clave..." /><button id="button-search" disabled>BUSCAR</button>
             </form>
         </main>
 
@@ -66,6 +71,18 @@
            - Escuchar cada vez que el usuario escribe una tecla
            - Habilitar/Deshabilitar el botón de enviar cuando hayan más de 3 caracteres
            */
+
+           const searchInput = document.querySelector("#input-search")
+           const button = document.querySelector("#button-search")
+
+           searchInput.addEventListener("keyup", function(e) {
+            if (searchInput.value.length >= 3) {
+                button.removeAttribute("disabled")
+            } else {
+                button.setAttribute("disabled", "")
+            }
+           })
+
         </script>
     </body>
 </html>

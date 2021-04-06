@@ -56,6 +56,7 @@
                 top: 13px;
                 right: 10px;
                 width: 25px;
+                display: none;
             }
 
 
@@ -64,20 +65,20 @@
     </head>
     <body>
         <main>
-            <form method="POST" action="register">
+            <form method="POST" action="register" id="form-register">
                 <div class="field">
                     <h2>Ingresar al sitio</h2>
                 </div>
                 <div class="field">
-                    <input name="email" placeholder="Nombre..." />
+                    <input name="email" id="field-email" placeholder="E-mail..." />
                     <img src="img/check.png" class="icon success-email" alt="">
                     <img src="img/cancel.png" class="icon error-email" alt="">
 
                 </div>
                 <div class="field">
-                    <input name="password" type="password" placeholder="Password..." />
-                    <img src="img/check.png" class="icon success-email" alt="">
-                    <img src="img/cancel.png" class="icon error-email" alt="">
+                    <input name="password" id="field-password" type="password" placeholder="Password..." />
+                    <img src="img/check.png"  class="icon success-password" alt="">
+                    <img src="img/cancel.png" class="icon error-password" alt="">
                 </div>
                 
                 <div class="field">
@@ -91,8 +92,55 @@
         <script>
            /*
            - Mostrar el ícono correspondiente en cada campo si esta correcto o no
-           - Se puede hacer al clickear en el botón o al tipear en cada campo
            */
+
+           function validateEmail(email) {
+                const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
+            }
+
+           const form = document.querySelector("#form-register")
+           const email = document.querySelector("#field-email")
+           const password = document.querySelector("#field-password")
+
+           const successEmail = document.querySelector(".success-email")
+           const errorEmail = document.querySelector(".error-email")
+
+           const successPassword = document.querySelector(".success-password")
+           const errorPassword = document.querySelector(".error-password")
+
+           const icons = document.querySelectorAll(".icon")
+
+           function hideIcons() {
+                icons.forEach(icon => {
+                    icon.style.display = "none"
+                })
+            }
+
+           form.addEventListener("submit", function(e) {
+                let errors = false
+
+                hideIcons()
+
+                if (validateEmail(email.value)) {
+                    successEmail.style.display = "block"
+                } else {
+                    errorEmail.style.display = "block"
+                    errors = true
+                }
+
+                if (password.value.length > 8) {
+                    successPassword.style.display = "block"
+                } else {
+                    errorPassword.style.display = "block"
+                    errors = true
+                }
+                
+                if (errors) {
+                    e.preventDefault()
+                }
+                
+           })
         </script>
     </body>
 </html>

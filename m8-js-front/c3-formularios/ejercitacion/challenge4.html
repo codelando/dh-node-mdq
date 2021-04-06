@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>EJ 3
+        <title>EJ 4
 
         </title>
         <meta charset="utf-8">
@@ -76,11 +76,21 @@
                 box-shadow: 0px 21px 30px -3px rgb(0 0 0 / 20%);
             }
             
+            h2.error::before{
+                background-image: url(img/cancel.png);
+                background-size: contain;
+                width: 1.5rem;
+                height: 1.5rem;
+                content: "";
+                display: inline-block;
+            }
         </style>
     </head>
     <body>
         <main>
-            <h2>LISTADO DE PENDIENTES</h2>
+            <h2 class="error">
+                LISTADO DE PENDIENTES
+            </h2>
             
             <form method="POST" action="register">
                 <div class="field">
