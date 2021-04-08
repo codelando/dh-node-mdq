@@ -27,6 +27,7 @@
                 background: teal;
                 padding: 50px;
                 color:white;
+                display: none;
             }
 
             button {
@@ -47,12 +48,30 @@
             </div>
         </main>
 
+            
        
 
         <script>
-           /*
-           Mostrar el mensaje de cookies sólo una única vez.
-           */
+           const cookieAlert = document.querySelector(".cookie-alert")
+           const acceptedCookies = localStorage.getItem("acceptedCookies")
+           const buttonAlert = document.querySelector(".cookie-alert button")
+
+           if (!acceptedCookies) {
+            cookieAlert.style.display = "block"
+
+            buttonAlert.addEventListener("click", function() {
+                cookieAlert.style.display = "none"
+                localStorage.setItem("acceptedCookies", true)
+            })
+
+            
+           }
+
+
+
+           
+           
+
         </script>
     </body>
 </html>

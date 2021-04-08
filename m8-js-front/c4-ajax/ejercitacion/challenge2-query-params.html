@@ -28,9 +28,18 @@
            /*
            - La API de Star Wars posee un endpoint que recibe un ID de persona:
            https://swapi.dev/api/people/{id}
-           - Utilizando URLQueryParams, recibir un id en la url (GET)
+           - Utilizando URLQueryParams, recibir un id en la url (GET) ?id=1
            y cargar el nombre del mismo
            */
+
+           const params = new URLSearchParams(location.search)
+           const userId = params.get('user_id')
+           
+           fetch("https://swapi.dev/api/people/" + userId)
+            .then(res => res.json())
+            .then(p => {
+                document.querySelector("main").innerHTML = p.name
+            })
         </script>
     </body>
 </html>

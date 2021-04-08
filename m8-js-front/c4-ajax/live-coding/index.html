@@ -3,35 +3,83 @@
     <head>
         <title>Live Coding</title>
         <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
         <style>
              html,body{
-                font-family: Arial, Helvetica, sans-serif;
-                background: pink;
+                font-family: 'Dela Gothic One', Arial, Helvetica, sans-serif;
+                background: rgb(170, 167, 219);
             }
 
-            input.error {
-                border-color: red;
-            }
-
-            input,button{
-                width: 100%;
-                font-size: 20px;
-                padding: 10px;
-                box-sizing: border-box;
-            }
-
-            button{
-                background: violet;
-                border: 0;
-            }
-
-            form{
-                max-width: 680px;
+            main{
+                max-width: 900px;
+                border: 1px solid black;
+                padding: 20px;
                 margin: auto;
             }
 
-            .input-container{
-                margin-bottom: 10px;
+            main .col{
+                width: 49%;
+                padding: 20px;
+                box-sizing: border-box;
+                display: inline-block;
+                vertical-align: top;
+            }
+
+
+            h3{
+                font-size: 0.1em;
+            }
+
+            article{
+                margin-bottom: 20px;
+                border-bottom: 1px dashed gray;
+                padding-bottom: 20px;
+            }
+
+            p{
+                font-family: 'Courier New', Courier, monospace;
+                margin: 0;
+                padding: 0;
+            }
+
+            .status{
+                background: black;
+                color: white;
+                display: inline-block;
+            }
+
+            textarea{
+                width: 100%;
+                border: 0;
+                min-height: 150px;
+            }
+
+            select{
+                width: 100%;
+                margin-bottom: 20px;
+                font-family: 'Dela Gothic One', Arial, Helvetica, sans-serif;
+            }
+            
+            button{
+                background: black;
+                color: white;
+                font-family: 'Dela Gothic One', Arial, Helvetica, sans-serif;
+                font-size: 1.5em;
+                width: 100%;
+            }
+
+            .form-wrapper{
+                position: sticky;
+                top: 0;
+                background: black;
+                color: white;
+                text-align: center;
+            }
+
+            svg{
+                width: 60px;
+                height: 60px;
             }
 
             
@@ -41,7 +89,47 @@
         
     </head>
     <body>
+        <main>
+            
+            <div class="col">
+                <h2>LISTADO TO-DO</h2>
+                <div class="todo-list">
+                    <svg version="1.1" id="L3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                        <circle fill="none" stroke="#fff" stroke-width="4" cx="50" cy="50" r="44" style="opacity:0.5;"/>
+                        <circle fill="#fff" stroke="#e74c3c" stroke-width="3" cx="8" cy="54" r="6" >
+                            <animateTransform
+                            attributeName="transform"
+                            dur="2s"
+                            type="rotate"
+                            from="0 50 48"
+                            to="360 50 52"
+                            repeatCount="indefinite" />
+                            
+                        </circle>
+                        </svg>
+
+                </div>
+            </div>
+
+            <div class="col form-wrapper">
+                <h2>CREAR TODO</h2>
+                <form action="">
+                    <textarea id="field-text" placeholder="Tarea a realizar"></textarea>
+                    <select id="field-status">
+                        <option value="pendiente">PENDIENTE</option>
+                        <option value="en progreso">EN PROGRESO</option>
+                        <option value="FINALIZADO">FINALIZADO</option>
+                    </select>
+                    <button>GUARDAR</button>
+                </form>
+                
+            </div>
+        </main>
         
-        <script src="scripts/main.js"></script>
+        <script src="scripts/config.js"></script>
+        <script src="scripts/create.js"></script>
+        <script src="scripts/read.js"></script>
+
     </body>
 </html>

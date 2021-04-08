@@ -1,0 +1,69 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "text": "aprender fetch get",
+      "status": "pendiente"
+    },
+    {
+      "id": 2,
+      "text": "aprender fetch post 123",
+      "status": "pendiente"
+    },
+    {
+      "text": "Espero que esto funque",
+      "status": "en progreso",
+      "id": 3
+    },
+    {
+      "text": "blabla dsadsa",
+      "status": "FINALIZADO",
+      "id": 4
+    },
+    {
+      "text": "dasdad\ndas\nd\nsa",
+      "status": "pendiente",
+      "id": 5
+    },
+    {
+      "text": "dsadas dsadas",
+      "status": "en progreso",
+      "id": 6
+    },
+    {
+      "text": "dsadas dsadasdasdas",
+      "status": "en progreso",
+      "id": 7
+    },
+    {
+      "text": "dsadas dsadasdasdas",
+      "status": "en progreso",
+      "id": 8
+    },
+    {
+      "text": "dsadas dsadasdasdas",
+      "status": "en progreso",
+      "id": 9
+    },
+    {
+      "text": "dsadas dsadasdasdas",
+      "status": "en progreso",
+      "id": 10
+    },
+    {
+      "text": "dsadas dsadasdasdas",
+      "status": "en progreso",
+      "id": 11
+    },
+    {
+      "text": "dsadas dsadasdasdas",
+      "status": "en progreso",
+      "id": 12
+    },
+    {
+      "text": "dsadasdsa",
+      "status": "pendiente",
+      "id": 13
+    }
+  ]
+}

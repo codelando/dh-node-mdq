@@ -1,7 +1,8 @@
 # JS DOM / Pedidos Asyncrónicos
 
 ## Fetch
-
+    - get
+    - post
 ## Location
 - href
 - reload
